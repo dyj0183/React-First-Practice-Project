@@ -10,6 +10,11 @@ html {
 
 body {
   margin: 0;
-  background-color: #80d3ec;
+  background-color: #a7cde7;
+}
+
+.welcome {
+  margin: 15px;
+  text-align: center;
 }
 
