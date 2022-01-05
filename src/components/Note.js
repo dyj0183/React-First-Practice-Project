@@ -1,8 +1,8 @@
 import './Note.css';
 
-function Note() {
+function Note(props) {
     return (
-        <div>Insert Any Note Here</div>
+        <div>{props.note}</div>
     );
 }
 

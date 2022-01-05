@@ -1,32 +1,33 @@
 import Expenses from "./components/Expenses";
 
+// JS new Date starts counting Month from 0 to 11
 const expenses = [
 	{
 		id: "e1",
 		title: "Grocery",
 		amount: 56.12,
-		date: new Date(2022, 1, 3),
+		date: new Date(2022, 0, 3),
 		note: "from Walmart",
 	},
 	{
 		id: "e2",
 		title: "Rent",
 		amount: 795.00,
-		date: new Date(2022, 1, 1),
+		date: new Date(2022, 0, 1),
 		note: "",
 	},
 	{
 		id: "e3",
 		title: "Car Insurance",
 		amount: 25.99,
-		date: new Date(2022, 1, 1),
+		date: new Date(2022, 0, 1),
 		note: "Pay again in March",
 	},
 	{
 		id: "e4",
 		title: "Health Insurance",
 		amount: 10.99,
-		date: new Date(2022, 1, 1),
+		date: new Date(2022, 0, 1),
 		note: "Pay in February",
 	},
 ];
