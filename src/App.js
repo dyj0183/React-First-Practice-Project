@@ -30,7 +30,7 @@ const expenses = [
 function App() {
 	return (
 		<div>
-			<h2 className="welcome">Welcome to Yu-Chun's React Practice App!</h2>
+			<h2 className="welcome">Welcome to Yu-Chun's React Practice App! Enjoy viewing my website!</h2>
 			<Expenses expenses={expenses} />
 		</div>
 	);
