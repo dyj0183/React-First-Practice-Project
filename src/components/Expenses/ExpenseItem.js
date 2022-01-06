@@ -2,13 +2,13 @@
 import "./ExpenseItem.css";
 // use ExpenseDate component
 import ExpenseDate from "./ExpenseDate";
-import Card from "./Card";
+import Card from "../UI/Card";
 
-import Note from "./Note";
+import Note from "./ExpenseNote";
 
 // a component in React is just a sepcial kind of function
 // props is an object that contains key value pairs data passed in from App.js
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
 	return (
 		<Card className="expense-item">
 			<ExpenseDate date={props.date} />

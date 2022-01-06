@@ -1,4 +1,4 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 
 // JS new Date starts counting Month from 0 to 11
 const expenses = [
@@ -7,7 +7,7 @@ const expenses = [
 		title: "Grocery",
 		amount: 56.12,
 		date: new Date(2022, 0, 3),
-		note: "from Walmart",
+		note: "Note: From Walmart",
 	},
 	{
 		id: "e2",
@@ -21,18 +21,18 @@ const expenses = [
 		title: "Car Insurance",
 		amount: 25.99,
 		date: new Date(2022, 0, 1),
-		note: "Pay again in March",
+		note: "Note: Renew in March",
 	},
 	{
 		id: "e4",
 		title: "Health Insurance",
 		amount: 10.99,
 		date: new Date(2022, 0, 1),
-		note: "Pay in February",
+		note: "Note: Pay again in February",
 	},
 ];
 
-function App() {
+const App = () => {
 	return (
 		<div>
 			<h2 className="welcome">Welcome to Yu-Chun's React Monthly Expenses Report!</h2>

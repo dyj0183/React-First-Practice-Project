@@ -1,6 +1,6 @@
 import './Card.css';
 
-function Card(props) {
+const Card = (props) => {
     // we need to make sure other classes names will be applied as well such as expense-item 
     const classes = 'card ' + props.className;
 
