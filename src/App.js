@@ -1,4 +1,5 @@
 import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 // JS new Date starts counting Month from 0 to 11
 const expenses = [
@@ -36,6 +37,7 @@ const App = () => {
 	return (
 		<div>
 			<h2 className="welcome">Welcome to Yu-Chun's React Monthly Expenses Report!</h2>
+			<NewExpense/>
 			<Expenses expenses={expenses} />
 		</div>
 	);
