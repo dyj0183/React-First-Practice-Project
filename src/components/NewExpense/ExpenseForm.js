@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./ExpenseForm.css";
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 	const [enteredTitle, setEnteredTitle] = useState("");
 	// when the change event occurs, we automatically get the "event"
 	const titleChangeHandler = (event) => {
@@ -30,7 +30,9 @@ const ExpenseForm = () => {
 			date: new Date(enteredDate),
 		};
 
-		console.log(expenseData);
+		// we need to pass this up to NewExpense (Parent)
+		props.onSaveExpenseData(expenseData);
+
 		// set all the values back to empty after submitting the form
 		setEnteredTitle("");
 		setEnteredAmount("");

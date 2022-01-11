@@ -34,10 +34,15 @@ const expenses = [
 ];
 
 const App = () => {
+	const newExpenseDataHandler = (newExpenseData) => {
+		console.log(newExpenseData);
+
+	}
+
 	return (
 		<div>
 			<h2 className="welcome">Welcome to Yu-Chun's React Monthly Expenses Report!</h2>
-			<NewExpense/>
+			<NewExpense onNewExpenseData={newExpenseDataHandler}/>
 			<Expenses expenses={expenses} />
 		</div>
 	);
