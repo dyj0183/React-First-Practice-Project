@@ -1,8 +1,9 @@
+import { useState } from "react";
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 // JS new Date starts counting Month from 0 to 11
-const expenses = [
+const DUMMY_EXPENSES_DATA = [
 	{
 		id: "e1",
 		title: "Grocery",
@@ -13,7 +14,7 @@ const expenses = [
 	{
 		id: "e2",
 		title: "Rent",
-		amount: 795.00,
+		amount: 795.0,
 		date: new Date(2022, 0, 1),
 		note: "",
 	},
@@ -34,18 +35,28 @@ const expenses = [
 ];
 
 const App = () => {
-	const newExpenseDataHandler = (newExpenseData) => {
-		console.log(newExpenseData);
+	// set up the initial data to be the Dummy Expenses Data
+	const [expensesData, setExpensesData] = useState(DUMMY_EXPENSES_DATA);
 
-	}
+	// we receive newExpenseData from NewExpense.js
+	// this function and state will be able to take user's new input and render it on the screen
+	const newExpenseDataHandler = (newExpenseData) => {
+		// if we update the state that depends on the previous state, then we should use the function
+		// instead of using setExpensesData([newExpenseData, ...DUMMY_EXPENSES_DATA])
+		setExpensesData((prevExpensesData) => {
+			return [newExpenseData, ...prevExpensesData];
+		});
+	};
 
 	return (
 		<div>
-			<h2 className="welcome">Welcome to Yu-Chun's React Monthly Expenses Report!</h2>
-			<NewExpense onNewExpenseData={newExpenseDataHandler}/>
-			<Expenses expenses={expenses} />
+			<h2 className="welcome">
+				Welcome to Yu-Chun's React Monthly Expenses Report!
+			</h2>
+			<NewExpense onNewExpenseData={newExpenseDataHandler} />
+			<Expenses expenses={expensesData} />
 		</div>
 	);
-}
+};
 
 export default App;
