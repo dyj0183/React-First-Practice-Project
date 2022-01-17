@@ -8,7 +8,7 @@ const DUMMY_EXPENSES_DATA = [
 		id: "e1",
 		title: "Grocery",
 		amount: 56.12,
-		date: new Date(2021, 0, 3),
+		date: new Date(2022, 0, 3),
 		note: "Note: From Walmart",
 	},
 	{
