@@ -11,8 +11,13 @@ const Expenses = (props) => {
 
 	const filterYearHandler = (selectedFilterYear) => {
 		setFilteredYear(selectedFilterYear);
-		console.log(selectedFilterYear);
 	};
+
+	// filter out the expenses based on the year users selected, js filter returns a new array
+	// filteredYear is type "string", props.expenses[0].date.getFullYear() is type "number", so we need to use toString()
+	const filteredYearExpenses = props.expenses.filter(
+		(expense) => expense.date.getFullYear().toString() === filteredYear
+	);
 
 	return (
 		<Card className="expenses">
@@ -21,15 +26,15 @@ const Expenses = (props) => {
 				onFilterYear={filterYearHandler}
 			/>
 
-			{props.expenses.map((expense) => (
+			{filteredYearExpenses.map((expense) => (
 				<ExpenseItem
+					key={expense.id}
 					title={expense.title}
 					amount={expense.amount}
 					date={expense.date}
 					note={expense.note}
 				></ExpenseItem>
 			))}
-
 		</Card>
 	);
 };

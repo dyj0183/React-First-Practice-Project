@@ -8,7 +8,7 @@ const DUMMY_EXPENSES_DATA = [
 		id: "e1",
 		title: "Grocery",
 		amount: 56.12,
-		date: new Date(2022, 0, 3),
+		date: new Date(2021, 0, 3),
 		note: "Note: From Walmart",
 	},
 	{
@@ -22,14 +22,14 @@ const DUMMY_EXPENSES_DATA = [
 		id: "e3",
 		title: "Car Insurance",
 		amount: 25.99,
-		date: new Date(2022, 0, 1),
+		date: new Date(2020, 0, 1),
 		note: "Note: Renew in March",
 	},
 	{
 		id: "e4",
 		title: "Health Insurance",
 		amount: 10.99,
-		date: new Date(2022, 0, 1),
+		date: new Date(2019, 0, 1),
 		note: "Note: Pay again in February",
 	},
 ];
